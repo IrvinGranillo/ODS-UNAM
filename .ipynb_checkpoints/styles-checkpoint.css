@@ -59,11 +59,14 @@
 
 .ods-acordeon {
   width: 100%;
-  max-width: 640px;
+  max-width: 100%;
   margin: 12px 0;
+  box-sizing: border-box;
 }
 
 .ods-acordeon summary {
+  width: 100%;
+  box-sizing: border-box;
   background-color: crimson;
   color: white;
   padding: 10px 14px;
@@ -78,8 +81,4 @@
   display: none;
 }
 
-.ods-acordeon div {
-  padding: 12px 14px;
-  margin-top: 8px;
-  color: black;
-}
+.ods-acordeon div
