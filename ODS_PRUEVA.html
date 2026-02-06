@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="poner-fin-a-la-pobreza-en-todas-sus-formas-y-en-todo-el-mundo" class="level1">
 <h1>1. Poner fin a la pobreza en todas sus formas y en todo el mundo</h1>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Meta 1.1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Meta 1.2</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Meta 1.1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Meta 1.2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">METAS E INDICADORES</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <link rel="stylesheet" href="styles.css">
@@ -117,32 +117,31 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</div>
-</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <style>
 .container{width:100%;box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
-.titulo{width:100%;background:#b33a3a;color:#fff;padding:10px 14px;border-radius:6px;cursor:pointer;user-select:none;font-weight:700;font-size:15px}
+.titulo-ods1{width:100%;background:#E5243B;color:#fff;padding:10px 14px;border-radius:6px;cursor:pointer;user-select:none;font-weight:700;font-size:15px}
 .panel{width:100%;margin-top:8px;box-sizing:border-box}
 .fila-metas{display:flex;gap:6px;width:100%;box-sizing:border-box;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}
 .col-meta{flex:1 0 0;min-width:110px;padding:8px;border-radius:6px;box-sizing:border-box;text-align:center;font-size:12px}
 .col-meta h4{margin:0 0 6px 0;color:#8b2b2b;font-size:12px;font-weight:700}
 .lista-ind{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;align-items:center}
 .lista-ind li{padding:4px 6px;border-radius:4px;font-size:11px}
-.col-meta:nth-child(odd){background:#f0f8ff}
-.col-meta:nth-child(even){background:#fff8f0}
+.col-meta:nth-child(odd){background:#fff0f0}
+.col-meta:nth-child(even){background:#ffe6e6}
 .fullwidth{width:100% !important;max-width:none !important}
 @media (max-width:480px){.col-meta{min-width:180px;font-size:13px}}
 </style>
 
 <div class="container fullwidth">
-  <div class="titulo" id="titulo">FIN A LA POBREZA</div>
-  <div class="panel" id="panel" style="display:none">
-    <div class="fila-metas" id="filaMetas"></div>
+  <div class="titulo-ods1" id="tituloODS1">FIN A LA POBREZA</div>
+  <div class="panel" id="panelODS1" style="display:none">
+    <div class="fila-metas" id="filaMetasODS1"></div>
   </div>
 </div>
 
 <script>
-const metas=[
+const metasODS1=[
   {lista:'META1.1',indicadores:['META1.1.1 G','META1.1.1.a G E','META1r.1.1 C']},
   {lista:'META1.2',indicadores:['META1.2.1(1) G','META1.2.1(2) G','META1.2.1.a G E','META1.2.1.b G EM','META1.2.2(1) G','META1.2.2(2) G','META1.2.2.a G E','META1.2.2.b G EM']},
   {lista:'META1.3',indicadores:['META1.3.1 G','META1.3.1.a G E']},
@@ -153,24 +152,315 @@ const metas=[
   {lista:'META1n.2',indicadores:['META1n.2.1 N E','META1n.2.2 N E']},
   {lista:'META1n.3',indicadores:['META1n.3.1 N','META1n.3.1.a N E','META1n.3.2 N','META1n.3.2.a N E','META1n.3.3 N','META1n.3.3.a N E','META1n.3.3.b N EM']}
 ];
-const titulo=document.getElementById('titulo');
-const panel=document.getElementById('panel');
-const filaMetas=document.getElementById('filaMetas');
-let abierto=false;
-function renderizar(){
-  filaMetas.innerHTML='';
-  metas.forEach(m=>{
+const titulo1=document.getElementById('tituloODS1');
+const panel1=document.getElementById('panelODS1');
+const filaMetas1=document.getElementById('filaMetasODS1');
+let abierto1=false;
+function renderizarODS1(){
+  filaMetas1.innerHTML='';
+  metasODS1.forEach(m=>{
     const col=document.createElement('div');
     col.className='col-meta';
     col.innerHTML=`<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i=>`<li>${i}</li>`).join('')}</ul>`;
-    filaMetas.appendChild(col);
+    filaMetas1.appendChild(col);
   });
 }
-titulo.addEventListener('click',()=>{
-  abierto=!abierto;
-  if(abierto){renderizar();panel.style.display='block'}else{panel.style.display='none'}
+titulo1.addEventListener('click',()=>{
+  abierto1=!abierto1;
+  if(abierto1){renderizarODS1();panel1.style.display='block'}else{panel1.style.display='none'}
 });
 </script>
+<br>
+<style>
+
+.container { width: 100%; box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+
+.titulo { 
+  width: 100%; 
+  background: #DDA63A; /* Color ODS 2. Cambiar a #b33a3a si prefieres el rojo anterior */
+  color: #fff; 
+  padding: 10px 14px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  user-select: none; 
+  font-weight: 700; 
+  font-size: 15px; 
+}
+
+
+.panel { width: 100%; margin-top: 8px; box-sizing: border-box; }
+.fila-metas { display: flex; gap: 6px; width: 100%; box-sizing: border-box; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+.col-meta { flex: 1 0 0; min-width: 110px; padding: 8px; border-radius: 6px; box-sizing: border-box; text-align: center; font-size: 12px; }
+.col-meta h4 { margin: 0 0 6px 0; color: #8b5b2b; font-size: 12px; font-weight: 700; } /* Color de texto ajustado para contraste */
+.lista-ind { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.lista-ind li { padding: 4px 6px; border-radius: 4px; font-size: 11px; white-space: nowrap; }
+
+
+.col-meta:nth-child(odd) { background: #fffdf0; }
+.col-meta:nth-child(even) { background: #fffae6; }
+
+.fullwidth { width: 100% !important; max-width: none !important; }
+
+@media (max-width: 480px) { .col-meta { min-width: 180px; font-size: 13px; } }
+</style>
+
+<div class="container fullwidth">
+  <div class="titulo" id="tituloODS2">HAMBRE CERO</div>
+  <div class="panel" id="panelODS2" style="display:none">
+    <div class="fila-metas" id="filaMetasODS2"></div>
+  </div>
+</div>
+
+<script>
+// Datos actualizados con la información proporcionada
+const metasODS2 = [
+  {
+    lista: 'META 2.1',
+    indicadores: [
+      '2.1.2(1) G',
+      '2.1.2(2) G',
+      '2.1.2.a G E',
+      '2.1.2.b G EM'
+    ]
+  },
+  {
+    lista: 'META 2.2',
+    indicadores: [
+      '2.2.1 G E',
+      '2.2.2 G E',
+      '2.2.2(1) G E',
+      '2.2.2(2) G E',
+      '2.2.3.a G',
+      '2.2.3.b G'
+    ]
+  },
+  {
+    lista: 'META 2n.1',
+    indicadores: [
+      '2n.1.1 N E'
+    ]
+  },
+  {
+    lista: 'META 2n.2',
+    indicadores: [
+      '2n.2.1 N',
+      '2n.2.1.a N E',
+      '2n.2.1.b N EM',
+      '2n.2.2 N',
+      '2n.2.2.a N E'
+    ]
+  },
+  {
+    lista: 'META 2n.3',
+    indicadores: [
+      '2n.3.1 N'
+    ]
+  }
+];
+
+
+const titulo2 = document.getElementById('tituloODS2');
+const panel2 = document.getElementById('panelODS2');
+const filaMetas2 = document.getElementById('filaMetasODS2');
+let abierto2 = false;
+
+function renderizarODS2() {
+  filaMetas2.innerHTML = '';
+  metasODS2.forEach(m => {
+    const col = document.createElement('div');
+    col.className = 'col-meta';
+    // Genera el HTML: Título de la meta + Lista de indicadores
+    col.innerHTML = `<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i => `<li>${i}</li>`).join('')}</ul>`;
+    filaMetas2.appendChild(col);
+  });
+}
+
+titulo2.addEventListener('click', () => {
+  abierto2 = !abierto2;
+  if (abierto2) {
+    renderizarODS2();
+    panel2.style.display = 'block';
+  } else {
+    panel2.style.display = 'none';
+  }
+});
+</script>
+
+<br>
+<style>
+/* Estilos base (se mantienen igual para consistencia visual) */
+.container { width: 100%; box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+/* Estilo específico para el botón del ODS 3 (Verde) */
+.titulo-ods3 { 
+  width: 100%; 
+  background: #4C9F38; /* Color Oficial ODS 3 */
+  color: #fff; 
+  padding: 10px 14px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  user-select: none; 
+  font-weight: 700; 
+  font-size: 15px; 
+}
+
+/* Panel y Grilla */
+.panel { width: 100%; margin-top: 8px; box-sizing: border-box; }
+.fila-metas { display: flex; gap: 6px; width: 100%; box-sizing: border-box; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+.col-meta { flex: 1 0 0; min-width: 110px; padding: 8px; border-radius: 6px; box-sizing: border-box; text-align: center; font-size: 12px; }
+/* Color del texto de los encabezados de las metas (verde oscuro para combinar) */
+.col-meta h4 { margin: 0 0 6px 0; color: #2e6622; font-size: 12px; font-weight: 700; }
+.lista-ind { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.lista-ind li { padding: 4px 6px; border-radius: 4px; font-size: 11px; white-space: nowrap; }
+
+/* Colores de fondo alternados para las columnas (tonos verdes muy suaves) */
+.col-meta:nth-child(odd) { background: #f0fdf4; }
+.col-meta:nth-child(even) { background: #e6f7e9; }
+
+.fullwidth { width: 100% !important; max-width: none !important; }
+
+@media (max-width: 480px) { .col-meta { min-width: 180px; font-size: 13px; } }
+</style>
+
+<div class="container fullwidth">
+  <div class="titulo-ods3" id="tituloODS3">SALUD Y BIENESTAR</div>
+  <div class="panel" id="panelODS3" style="display:none">
+    <div class="fila-metas" id="filaMetasODS3"></div>
+  </div>
+</div>
+
+<script>
+// Datos aislados en variable única metasODS3
+const metasODS3 = [
+  {
+    lista: 'META 3.1',
+    indicadores: [
+      '3.1.1 G E',
+      '3.1.2 G E'
+    ]
+  },
+  {
+    lista: 'META 3.2',
+    indicadores: [
+      '3.2.1 G E',
+      '3.2.2 G E'
+    ]
+  },
+  {
+    lista: 'META 3.3',
+    indicadores: [
+      '3.3.1 G',
+      '3.3.2a G',
+      '3.3.2b G E',
+      '3.3.2c G E',
+      '3.3.3 G E',
+      '3r.3a C',
+      '3r.3b C E',
+      '3r.3.c(1) C',
+      '3r.3.c(2) C E',
+      '3.3.4 G E',
+      '3.3.5 G E'
+    ]
+  },
+  {
+    lista: 'META 3.4',
+    indicadores: [
+      '3.4.1 G E',
+      '3.4.2.a G E',
+      '3.4.2.b G'
+    ]
+  },
+  {
+    lista: 'META 3.6',
+    indicadores: [
+      '3.6.1 G E'
+    ]
+  },
+  {
+    lista: 'META 3.7',
+    indicadores: [
+      '3.7.1 G E',
+      '3r.7.1 C E',
+      '3.7.2.a G E',
+      '3.7.2.b G E',
+      '3r.7.a C',
+      '3r.7.b C E'
+    ]
+  },
+  {
+    lista: 'META 3.9',
+    indicadores: [
+      '3.9.1 G E',
+      '3.9.2a G E',
+      '3.9.3a G E',
+      '3.9.3b G'
+    ]
+  },
+  {
+    lista: 'META 3.c',
+    indicadores: [
+      '3.c.1 G E'
+    ]
+  },
+  {
+    lista: 'META 3n.1',
+    indicadores: [
+      '3n.1.1 N',
+      '3n.1.1.a N E',
+      '3n.1.1.b N EM',
+      '3n.1.2 N',
+      '3n.1.2.a N E',
+      '3n.1.3 N',
+      '3n.1.3.a N E',
+      '3n.1.4 N'
+    ]
+  },
+  {
+    lista: 'META 3n.3',
+    indicadores: [
+      '3n.3.1 N E'
+    ]
+  },
+  {
+    lista: 'META 3n.4',
+    indicadores: [
+      '3n.4.1a N',
+      '3n.4.1.b N E'
+    ]
+  }
+];
+
+// Lógica de control con variables únicas (sufijo 3)
+const titulo3 = document.getElementById('tituloODS3');
+const panel3 = document.getElementById('panelODS3');
+const filaMetas3 = document.getElementById('filaMetasODS3');
+let abierto3 = false;
+
+function renderizarODS3() {
+  filaMetas3.innerHTML = '';
+  metasODS3.forEach(m => {
+    const col = document.createElement('div');
+    col.className = 'col-meta';
+    col.innerHTML = `<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i => `<li>${i}</li>`).join('')}</ul>`;
+    filaMetas3.appendChild(col);
+  });
+}
+
+titulo3.addEventListener('click', () => {
+  abierto3 = !abierto3;
+  if (abierto3) {
+    renderizarODS3();
+    panel3.style.display = 'block';
+  } else {
+    panel3.style.display = 'none';
+  }
+});
+</script>
+<br>
+</div>
+</div>
+</div>
 </section>
 
 </main>
