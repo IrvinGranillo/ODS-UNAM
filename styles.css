@@ -65,3 +65,89 @@
   outline: 3px solid var(--ods-color);
   outline-offset: 3px;
 }
+
+
+
+
+<style>
+.container { width: 100%; box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+.panel { width: 100%; margin-top: 8px; box-sizing: border-box; }
+.fullwidth { width: 100% !important; max-width: none !important; }
+
+.ods-header {
+  width: 100%;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  margin-bottom: 5px;
+}
+.ods-header:hover { opacity: 0.9; }
+
+.ods-1 { background-color: #E5243B; }
+.ods-2 { background-color: #DDA63A; }
+.ods-3 { background-color: #4C9F38; }
+.ods-4 { background-color: #C5192D; }
+.ods-5 { background-color: #FF3A21; }
+.ods-6 { background-color: #26BDE2; }
+.ods-7 { background-color: #FCC30B; }
+.ods-8 { background-color: #A21942; }
+.ods-9 { background-color: #FD6925; }
+.ods-10 { background-color: #DD1367; }
+.ods-11 { background-color: #FD9D24; }
+.ods-12 { background-color: #BF8B2E; }
+.ods-13 { background-color: #3F7E44; }
+.ods-14 { background-color: #0A97D9; }
+.ods-15 { background-color: #56C02B; }
+.ods-16 { background-color: #00689D; }
+.ods-17 { background-color: #19486A; }
+
+.fila-metas { display: flex; gap: 6px; width: 100%; box-sizing: border-box; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+.col-meta { flex: 1 0 0; min-width: 110px; padding: 8px; border-radius: 6px; box-sizing: border-box; text-align: center; font-size: 12px; }
+
+.col-meta h4 { margin: 0 0 6px 0; font-size: 12px; font-weight: 700; color: #000; opacity: 0.75; }
+.lista-ind { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.lista-ind li { padding: 4px 6px; border-radius: 4px; font-size: 11px; white-space: nowrap; background: rgba(255,255,255,0.85); border: 1px solid rgba(0,0,0,0.05); color: #000; }
+
+#panelODS1 .col-meta:nth-child(odd) { background-color: #FFCDD2; }
+#panelODS1 .col-meta:nth-child(even) { background-color: #FFEBEE; }
+#panelODS2 .col-meta:nth-child(odd) { background-color: #FFE082; }
+#panelODS2 .col-meta:nth-child(even) { background-color: #FFF59D; }
+#panelODS3 .col-meta:nth-child(odd) { background-color: #C8E6C9; }
+#panelODS3 .col-meta:nth-child(even) { background-color: #E8F5E9; }
+#panelODS4 .col-meta:nth-child(odd) { background-color: #EF9A9A; }
+#panelODS4 .col-meta:nth-child(even) { background-color: #FFCDD2; }
+#panelODS5 .col-meta:nth-child(odd) { background-color: #FFCCBC; }
+#panelODS5 .col-meta:nth-child(even) { background-color: #FFAB91; }
+#panelODS6 .col-meta:nth-child(odd) { background-color: #B2EBF2; }
+#panelODS6 .col-meta:nth-child(even) { background-color: #E0F7FA; }
+#panelODS7 .col-meta:nth-child(odd) { background-color: #FFF176; }
+#panelODS7 .col-meta:nth-child(even) { background-color: #FFF9C4; }
+#panelODS8 .col-meta:nth-child(odd) { background-color: #F8BBD0; }
+#panelODS8 .col-meta:nth-child(even) { background-color: #FCE4EC; }
+#panelODS9 .col-meta:nth-child(odd) { background-color: #FFCC80; }
+#panelODS9 .col-meta:nth-child(even) { background-color: #FFE0B2; }
+#panelODS10 .col-meta:nth-child(odd) { background-color: #F48FB1; }
+#panelODS10 .col-meta:nth-child(even) { background-color: #F8BBD0; }
+#panelODS11 .col-meta:nth-child(odd) { background-color: #FFCC80; }
+#panelODS11 .col-meta:nth-child(even) { background-color: #FFE0B2; }
+#panelODS12 .col-meta:nth-child(odd) { background-color: #DCE775; }
+#panelODS12 .col-meta:nth-child(even) { background-color: #F0F4C3; }
+#panelODS13 .col-meta:nth-child(odd) { background-color: #A5D6A7; }
+#panelODS13 .col-meta:nth-child(even) { background-color: #C8E6C9; }
+#panelODS14 .col-meta:nth-child(odd) { background-color: #81D4FA; }
+#panelODS14 .col-meta:nth-child(even) { background-color: #B3E5FC; }
+#panelODS15 .col-meta:nth-child(odd) { background-color: #AED581; }
+#panelODS15 .col-meta:nth-child(even) { background-color: #DCEDC8; }
+#panelODS16 .col-meta:nth-child(odd) { background-color: #90CAF9; }
+#panelODS16 .col-meta:nth-child(even) { background-color: #BBDEFB; }
+#panelODS17 .col-meta:nth-child(odd) { background-color: #9FA8DA; }
+#panelODS17 .col-meta:nth-child(even) { background-color: #C5CAE9; }
+
+@media (max-width: 480px) { .col-meta { min-width: 180px; font-size: 13px; } }
+</style>
