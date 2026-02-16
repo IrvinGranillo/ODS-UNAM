@@ -150,4 +150,8 @@
 #panelODS17 .col-meta:nth-child(even) { background-color: #C5CAE9; }
 
 @media (max-width: 480px) { .col-meta { min-width: 180px; font-size: 13px; } }
-</style>
+
+
+.quarto-title-block {
+  display: none;
+}
