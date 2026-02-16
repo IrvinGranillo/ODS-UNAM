@@ -1,16 +1,31 @@
+<style>
+body, 
+.quarto-container, 
+.page-columns, 
+.grid, 
+.container-fluid, 
+.main {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 .ods-btn {
   background-color: transparent;
   border: none;
   padding: 0;
-  cursor: pointer;
+  cursor: default;
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 170px;
+  height: 170px;
   overflow: hidden;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   border-radius: 16px;
+  margin: 4px;
   --ods-color: #E5233D;
 }
 
@@ -30,7 +45,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 12px;
+  padding: 10px;
   background: transparent;
   opacity: 0;
   transition: opacity 300ms ease;
@@ -38,14 +53,14 @@
 }
 
 .ods-btn .ods-text strong {
-  font-size: 1.05rem;
-  margin-bottom: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
   display: block;
 }
 
 .ods-btn .ods-text p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.2;
 }
 
@@ -66,10 +81,6 @@
   outline-offset: 3px;
 }
 
-
-
-
-<style>
 .container { width: 100%; box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
 .panel { width: 100%; margin-top: 8px; box-sizing: border-box; }
 .fullwidth { width: 100% !important; max-width: none !important; }
@@ -149,9 +160,9 @@
 #panelODS17 .col-meta:nth-child(odd) { background-color: #9FA8DA; }
 #panelODS17 .col-meta:nth-child(even) { background-color: #C5CAE9; }
 
-@media (max-width: 480px) { .col-meta { min-width: 180px; font-size: 13px; } }
-
+@media (max-width: 480px) { .col-meta { min-width: 110px; font-size: 11px; } }
 
 .quarto-title-block {
   display: none;
 }
+</style>
