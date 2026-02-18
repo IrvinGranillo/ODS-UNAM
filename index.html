@@ -75,7 +75,7 @@ Objetivos de Desarrollo Sostenible<br>
 <p><img src="imagenes/logo_unam.png" alt="Logo UNAM" style="height:70px;"></p>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">OBJETIVOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">METAS DE CADA OBJETIVO</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">METAS E INDICADORES</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">OBJETIVOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">METAS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">INDICADORES</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="ods-btn" style="--ods-color: #E5243B;">
@@ -244,48 +244,75 @@ Objetivos de Desarrollo Sostenible<br>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="container fullwidth">
-  <div class="ods-header ods-1" id="tituloODS1">FIN A LA POBREZA</div>
-  <div class="panel" id="panelODS1" style="display:none">
-    <div class="fila-metas" id="filaMetasODS1"></div>
+<div class="ods-box">
+  <div class="ods-head" onclick="this.classList.toggle('open'); document.getElementById('b1').classList.toggle('show')">
+    1. Poner fin a la pobreza en todas sus formas y en todo el mundo
   </div>
+  <div class="ods-body" id="b1"></div>
 </div>
 
 <script>
-const metasODS1 = [
-  {lista:'META 1.1',indicadores:['1.1.1 G','1.1.1.a G E','1r.1.1 C']},
-  {lista:'META 1.2',indicadores:['1.2.1(1) G','1.2.1(2) G','1.2.1.a G E','1.2.1.b G EM','1.2.2(1) G','1.2.2(2) G','1.2.2.a G E','1.2.2.b G EM']},
-  {lista:'META 1.3',indicadores:['1.3.1 G','1.3.1.a G E']},
-  {lista:'META 1.4',indicadores:['1.4.1 G E','1.4.2 G E']},
-  {lista:'META 1.5',indicadores:['1.5.1 G','1.5.4 G']},
-  {lista:'META 1.a',indicadores:['1.a.1 G','1.a.2 G']},
-  {lista:'META 1n.1',indicadores:['1n.1.1 N','1n.1.1.a N E','1n.1.1.b N EM']},
-  {lista:'META 1n.2',indicadores:['1n.2.1 N E','1n.2.2 N E']},
-  {lista:'META 1n.3',indicadores:['1n.3.1 N','1n.3.1.a N E','1n.3.2 N','1n.3.2.a N E','1n.3.3 N','1n.3.3.a N E','1n.3.3.b N EM']}
+const d1 = [
+ {m:"Meta 1.1", t:"De aquí a 2030, erradicar para todas las personas y en todo el mundo la pobreza extrema (actualmente se considera que sufren pobreza extrema las personas que viven con menos de 1,25 dólares de los Estados Unidos al día)", i:[
+   {c:"1.1.1", t:"Proporción de la población que vive por debajo del umbral internacional de la pobreza (1.90 dólares diarios), desglosada por sexo, edad, situación laboral y ubicación geográfica (urbano y rural)"},
+   {c:"1.1.1.a", t:"Proporción de la población que vive por debajo del umbral internacional de la pobreza (1.90 dólares diarios), por desglose geográfico", u:"ODS_PRUEVA.html"},
+   {c:"1r.1.1", t:"Porcentaje de la población que vive por debajo del umbral de pobreza extrema regional, desglosada por sexo, edad, condición de actividad, ubicación geográfica (urbana y rural) y etnia"}
+ ]},
+ {m:"Meta 1.2", t:"De aquí a 2030, reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones con arreglo a las definiciones nacionales", i:[
+   {c:"1.2.1(1)", t:"Proporción de la población que vive por debajo del umbral nacional de la pobreza, desglosada por sexo y edad (2016 - 2022)"}, 
+   {c:"1.2.1(2)", t:"Proporción de la población que vive por debajo del umbral nacional de la pobreza, desglosada por sexo y edad (2008 - 2014) [Histórico]"},
+   {c:"1.2.1.a", t:"Proporción de la población que vive por debajo del umbral nacional de la pobreza, por desglose geográfico (Entidad federativa)"}, 
+   {c:"1.2.1.b", t:"Proporción de la población que vive por debajo del umbral nacional de la pobreza, por desglose geográfico (Municipio o demarcación territorial)"},
+   {c:"1.2.2(1)", t:"Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones, de acuerdo con las definiciones nacionales (2016 - 2022)"}, 
+   {c:"1.2.2(2)", t:"Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones, de acuerdo con las definiciones nacionales (2008 - 2014) [Histórico]"},
+   {c:"1.2.2.a", t:"Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones, con arreglo a las definiciones nacionales, por desglose geográfico (Entidad federativa)"}, 
+   {c:"1.2.2.b", t:"Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones, con arreglo a las definiciones nacionales, por desglose geográfico (Municipio o demarcación territorial)"}
+ ]},
+ {m:"Meta 1.3", t:"Implementar a nivel nacional sistemas y medidas apropiados de protección social para todos, incluidos niveles mínimos, y, de aquí a 2030, lograr una amplia cobertura de las personas pobres y vulnerables", i:[
+   {c:"1.3.1", t:"Proporción de la población cubierta por sistemas o niveles mínimos de protección social, desglosada por sexo y grupos edad"}, 
+   {c:"1.3.1.a", t:"Proporción de la población cubierta por sistemas o niveles mínimos de protección social, por desglose geográfico"}
+ ]},
+ {m:"Meta 1.4", t:"De aquí a 2030, garantizar que todos los hombres y mujeres, en particular los pobres y los vulnerables, tengan los mismos derechos a los recursos económicos y acceso a los servicios básicos, la propiedad y el control de la tierra y otros bienes, la herencia, los recursos naturales, las nuevas tecnologías apropiadas y los servicios financieros, incluida la microfinanciación", i:[
+   {c:"1.4.1", t:"Proporción de la población que vive en hogares con acceso a los servicios básicos"}, 
+   {c:"1.4.2", t:"Proporción del total de la población adulta con derechos seguros de tenencia de la tierra que posee documentación reconocida legalmente al respecto, desglosada por sexo y tipo de tenencia"}
+ ]},
+ {m:"Meta 1.5", t:"De aquí a 2030, fomentar la resiliencia de los pobres y las personas que se encuentran en situaciones de vulnerabilidad y reducir su exposición y vulnerabilidad a los fenómenos extremos relacionados con el clima y otras perturbaciones y desastres económicos, sociales y ambientales", i:[
+   {c:"1.5.1", t:"Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100 000 habitantes"}, 
+   {c:"1.5.4", t:"Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres"}
+ ]},
+ {m:"Meta 1.a", t:"Garantizar una movilización significativa de recursos procedentes de diversas fuentes, incluso mediante la mejora de la cooperación para el desarrollo, a fin de proporcionar medios suficientes y previsibles a los países en desarrollo, en particular los países menos adelantados, para que implementen programas y políticas encaminados a poner fin a la pobreza en todas sus dimensiones", i:[
+   {c:"1.a.1", t:"Total de las subvenciones de asistencia oficial para el desarrollo de todos los donantes que se centran en la reducción de la pobreza como porcentaje del ingreso nacional bruto del país receptor"}, 
+   {c:"1.a.2", t:"Proporción del gasto público total en servicios esenciales (educación, salud y protección social)"}
+ ]},
+ {m:"Meta 1n.1", t:"Pobreza multidimensional por grupos en condiciones de desventaja (desagregación por personas indígenas, adultos mayores, personas con discapacidad, niños y niñas (menores de 18 años) y primera infancia (0 a 5 años) basada en el enfoque de derechos", i:[
+   {c:"1n.1.1", t:"Porcentaje de la población en situación de pobreza"}, 
+   {c:"1n.1.1.a", t:"Porcentaje de la población en situación de pobreza, por desglose geográfico y grupo poblacional (Entidad federativa)"}, 
+   {c:"1n.1.1.b", t:"Porcentaje de la población en situación de pobreza, por desglose geográfico y grupo poblacional (Municipio o demarcación territorial)"}
+ ]},
+ {m:"Meta 1n.2", t:"Atención integral en la primera infancia", i:[
+   {c:"1n.2.1", t:"Proporción de partos con asistencia de personal sanitario capacitado"}, 
+   {c:"1n.2.2", t:"Proporción de la población de un año de edad con esquema básico completo de vacunación"}
+ ]},
+ {m:"Meta 1n.3", t:"Construcción de un sistema de protección social con un enfoque de derechos", i:[
+   {c:"1n.3.1", t:"Porcentaje de población de 65 años o más que recibe jubilación o pensión (contributiva o no contributiva) por un monto igual o mayor al valor promedio de la línea de pobreza por ingresos"}, 
+   {c:"1n.3.1.a", t:"Porcentaje de población de 65 años o más que recibe jubilación o pensión (contributiva o no contributiva) por un monto igual o mayor al valor promedio de la línea de pobreza por ingresos, por desglose geográfico"},
+   {c:"1n.3.2", t:"Porcentaje de población ocupada con hijos(as) de seis años o menos que tiene acceso a guarderías como prestación laboral"}, 
+   {c:"1n.3.2.a", t:"Porcentaje de población ocupada con hijos(as) de seis años o menos que tiene acceso a guarderías como prestación laboral, por desglose geográfico"},
+   {c:"1n.3.3", t:"Porcentaje de la población que presenta carencia por acceso a la seguridad social"}, 
+   {c:"1n.3.3.a", t:"Porcentaje de la población que presenta carencia por acceso a la seguridad social, por desglose geográfico y grupo poblacional (Entidad Federativa)"}, 
+   {c:"1n.3.3.b", t:"Porcentaje de la población que presenta carencia por acceso a la seguridad social, por desglose geográfico y grupo poblacional (Municipio o demarcación territorial)"}
+ ]}
 ];
 
-const titulo1 = document.getElementById('tituloODS1');
-const panel1 = document.getElementById('panelODS1');
-const filaMetas1 = document.getElementById('filaMetasODS1');
-let abierto1 = false;
-
-titulo1.addEventListener('click', () => {
-  abierto1 = !abierto1;
-  if (abierto1) {
-    filaMetas1.innerHTML = '';
-    metasODS1.forEach(m => {
-      const col = document.createElement('div');
-      col.className = 'col-meta';
-      col.innerHTML = `<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i => `<li>${i}</li>`).join('')}</ul>`;
-      filaMetas1.appendChild(col);
-    });
-    panel1.style.display = 'block';
-  } else {
-    panel1.style.display = 'none';
-  }
-});
+document.getElementById('b1').innerHTML = d1.map(x => `
+  <div class="meta-col">
+    <div class="meta-tit">${x.m}<span class="tip">${x.t}</span></div>
+    ${x.i.map(y => `<${y.u?'a href="'+y.u+'" target="_blank"':'div'} class="ind-btn ${y.u?'link':''}">
+      ${y.c}<span class="tip">${y.t}</span>
+    </${y.u?'a':'div'}>`).join('')}
+  </div>
+`).join('');
 </script>
-<br>
 <div class="container fullwidth">
   <div class="ods-header ods-2" id="tituloODS2">HAMBRE CERO</div>
   <div class="panel" id="panelODS2" style="display:none">
@@ -323,7 +350,7 @@ titulo2.addEventListener('click', () => {
   }
 });
 </script>
-<br>
+
 <div class="container fullwidth">
   <div class="ods-header ods-3" id="tituloODS3">SALUD Y BIENESTAR</div>
   <div class="panel" id="panelODS3" style="display:none">
@@ -335,35 +362,7 @@ titulo2.addEventListener('click', () => {
 const metasODS3 = [
   {lista:'META 3.1',indicadores:['3.1.1 G E','3.1.2 G E']},
   {lista:'META 3.2',indicadores:['3.2.1 G E','3.2.2 G E']},
-  {lista:'META 3.3',indicadores:['3.3.1 G','3.3.2a G','3.3.2b G E','3.3.2c G E','3.3.3 G E','3r.3a C','3r.3b C E','3r.3.c(1) C','3r.3.c(2) C E','3.3.4 G E','3.3.5 G E']},
-  {lista:'META 3.4',indicadores:['3.4.1 G E','3.4.2.a G E','3.4.2.b G']},
-  {lista:'META 3.6',indicadores:['3.6.1 G E']},
-  {lista:'META 3.7',indicadores:['3.7.1 G E','3r.7.1 C E','3.7.2.a G E','3.7.2.b G E','3r.7.a C','3r.7.b C E']},
-  {lista:'META 3.9',indicadores:['3.9.1 G E','3.9.2a G E','3.9.3a G E','3.9.3b G']},
-  {lista:'META 3.c',indicadores:['3.c.1 G E']},
-  {lista:'META 3n.1',indicadores:['3n.1.1 N','3n.1.1.a N E','3n.1.1.b N EM','3n.1.2 N','3n.1.2.a N E','3n.1.3 N','3n.1.3.a N E','3n.1.4 N']},
-  {lista:'META 3n.3',indicadores:['3n.3.1 N E']},
-  {lista:'META 3n.4',indicadores:['3n.4.1a N','3n.4.1.b N E']}
-];
 
-const titulo3 = document.getElementById('tituloODS3');
-const panel3 = document.getElementById('panelODS3');
-const filaMetas3 = document.getElementById('filaMetasODS3');
-let abierto3 = false;
-
-titulo3.addEventListener('click', () => {
-  abierto3 = !abierto3;
-  if (abierto3) {
-    filaMetas3.innerHTML = '';
-    metasODS3.forEach(m => {
-      const col = document.createElement('div');
-      col.className = 'col-meta';
-      col.innerHTML = `<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i => `<li>${i}</li>`).join('')}</ul>`;
-      filaMetas3.appendChild(col);
-    });
-    panel3.style.display = 'block';
-  } else {
-    panel3.style.display = 'none';
   }
 });
 </script>
@@ -391,26 +390,6 @@ const metasODS4 = [
 
 const titulo4 = document.getElementById('tituloODS4');
 const panel4 = document.getElementById('panelODS4');
-const filaMetas4 = document.getElementById('filaMetasODS4');
-let abierto4 = false;
-
-titulo4.addEventListener('click', () => {
-  abierto4 = !abierto4;
-  if (abierto4) {
-    filaMetas4.innerHTML = '';
-    metasODS4.forEach(m => {
-      const col = document.createElement('div');
-      col.className = 'col-meta';
-      col.innerHTML = `<h4>${m.lista}</h4><ul class="lista-ind">${m.indicadores.map(i => `<li>${i}</li>`).join('')}</ul>`;
-      filaMetas4.appendChild(col);
-    });
-    panel4.style.display = 'block';
-  } else {
-    panel4.style.display = 'none';
-  }
-});
-</script>
-<br>
 <div class="container fullwidth">
   <div class="ods-header ods-5" id="tituloODS5">IGUALDAD DE GÉNERO</div>
   <div class="panel" id="panelODS5" style="display:none">

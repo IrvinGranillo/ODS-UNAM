@@ -166,3 +166,138 @@ body,
   display: none;
 }
 </style>
+
+
+
+
+
+.ods-box {
+  font-family: sans-serif;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ods-head {
+  background: #E5243B;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.ods-head:hover {
+  background: #c21c30;
+}
+.ods-head::after {
+  content: '+';
+  font-size: 1.2em;
+}
+.ods-head.open::after {
+  content: '-';
+}
+.ods-body {
+  display: none;
+  overflow-x: auto;
+  padding: 10px 2px;
+  gap: 8px;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+.ods-body.show {
+  display: flex;
+}
+.meta-col {
+  min-width: 130px;
+  max-width: 150px;
+  background: #fadbdc;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border: 1px solid #f0c0c4;
+}
+.meta-tit {
+  color: #a7192a;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  cursor: help;
+  position: relative;
+  font-size: 0.85em;
+  border-bottom: 1px solid rgba(167, 25, 42, 0.2);
+  padding-bottom: 4px;
+  line-height: 1.2;
+}
+.ind-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.75em;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  word-wrap: break-word;
+}
+.ind-btn:hover {
+  border-color: #E5243B;
+  color: #E5243B;
+  font-weight: bold;
+  z-index: 20;
+}
+.ind-btn.link {
+  border-left: 3px solid #E5243B;
+}
+.tip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: #222;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  z-index: 100;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+  font-weight: normal;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-align: left;
+  line-height: 1.3;
+}
+.meta-tit:hover .tip, .ind-btn:hover .tip {
+  visibility: visible;
+  opacity: 1;
+}
+.tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: #222;
+}
+
+
+
+
+
+
+
+
+
