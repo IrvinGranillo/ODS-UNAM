@@ -98,6 +98,7 @@ body,
   transition: opacity 0.2s;
   margin-bottom: 5px;
 }
+
 .ods-header:hover { opacity: 0.9; }
 
 .ods-1 { background-color: #E5243B; }
@@ -165,11 +166,6 @@ body,
 .quarto-title-block {
   display: none;
 }
-</style>
-
-
-
-
 
 .ods-box {
   font-family: sans-serif;
@@ -261,10 +257,11 @@ body,
 .tip {
   visibility: hidden;
   position: absolute;
-  bottom: 105%;
+  top: 105%;
+  bottom: auto;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 250px;
   background: #222;
   color: #fff;
   padding: 8px;
@@ -286,18 +283,29 @@ body,
 .tip::after {
   content: '';
   position: absolute;
-  top: 100%;
+  bottom: 100%;
+  top: auto;
   left: 50%;
   margin-left: -5px;
   border: 5px solid transparent;
-  border-top-color: #222;
+  border-bottom-color: #222;
 }
-
-
-
-
-
-
-
-
-
+.meta-col:first-child .tip {
+  left: 0;
+  transform: none;
+}
+.meta-col:first-child .tip::after {
+  left: 25px;
+  margin-left: 0;
+}
+.meta-col:last-child .tip {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+.meta-col:last-child .tip::after {
+  left: auto;
+  right: 25px;
+  margin-left: 0;
+}
+</style>
